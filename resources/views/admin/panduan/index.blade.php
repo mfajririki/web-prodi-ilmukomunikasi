@@ -23,7 +23,7 @@
 
                     <div class="card">
                         <div class="card-header">
-                            <a href="{{ route('panduan.create') }}" class="btn btn-sm btn-primary">Tambah Data <i
+                            <a href="{{ route('admin-panduan.create') }}" class="btn btn-sm btn-primary">Tambah Data <i
                                     class="ml-2 fa fa-plus fa-sm"></i></a>
                         </div>
                         <!-- /.card-header -->
@@ -47,12 +47,12 @@
                                             <td><a href="{{ asset($panduan->document) }}"
                                                     target="_blank">{{ $panduan->document }}</a></td>
                                             <td>
-                                                <a href="{{ route('panduan.edit', $panduan) }}"
+                                                <a href="{{ route('admin-panduan.edit', $panduan) }}"
                                                     class="btn btn-sm btn-success"> Edit <i
                                                         class="ml-2 fas fa-edit fa-sm"></i>
                                                 </a>
                                                 <form class="d-inline" method="POST"
-                                                    action="{{ route('panduan.destroy', $panduan) }}">
+                                                    action="{{ route('admin-panduan.destroy', $panduan) }}">
                                                     {{ csrf_field() }}
                                                     {{ method_field('DELETE') }}
 
